@@ -8,6 +8,7 @@
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="javascript.js"></script>
 
 </head>
 
@@ -36,38 +37,5 @@
         <audio data-key="72" src="audiofiles/CYCdh_VinylK3-Kick01.wav"></audio>
 
     </section>
-
-
-    <script>
-
-        function playKey(e) {
-            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
-            audio.currentTime = 0
-
-            if (!audio) {
-                console.log("no audio") 
-                return
-            } // stop if no audio
-
-            audio.play();
-            key.classList.add("playing");
-            
-        }
-    
-        function removeTransition(e) {
-            if (e.propertyName !== 'transform') {
-                return; //skip if its not a transform
-            }
-            this.classList.remove('playing')
-        }
-
-        const keys = document.querySelectorAll('.key')
-        
-        keys.forEach(key => key.addEventListener('transitionend', removeTransition))
-        window.addEventListener('keydown', playKey);
-    
-    </script>
-
 </body>
 </html>

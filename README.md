@@ -1,2 +1,3 @@
 # JSDrumKit
-<!-- Simple Javascript drumkit application -->
+
+Simple Javascript drumkit application
