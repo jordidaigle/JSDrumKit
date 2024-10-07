@@ -1,3 +1,3 @@
 # JSDrumKit
 
-Simple Javascript drumkit application not deployed
+Simple Javascript drumkit application. Not deployed
